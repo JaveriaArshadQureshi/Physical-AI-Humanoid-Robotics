@@ -1,0 +1,28 @@
+{
+  "id": "safety-edge-computing",
+  "title": "Chapter 15: Safety, Fail-safes, Edge Computing",
+  "description": "Ensuring safe operation and efficient computation for humanoid robots",
+  "source": "@site/docs/15-safety-edge-computing.md",
+  "sourceDirName": ".",
+  "slug": "/safety-edge-computing",
+  "permalink": "/docs/safety-edge-computing",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/15-safety-edge-computing.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 15,
+  "frontMatter": {
+    "title": "Chapter 15: Safety, Fail-safes, Edge Computing",
+    "description": "Ensuring safe operation and efficient computation for humanoid robots"
+  },
+  "sidebar": "bookSidebar",
+  "previous": {
+    "title": "Chapter 14: Autonomous Navigation for Humanoids",
+    "permalink": "/docs/autonomous-navigation-humanoids"
+  },
+  "next": {
+    "title": "Chapter 16: Capstone Project Guide",
+    "permalink": "/docs/capstone-project-guide"
+  }
+}

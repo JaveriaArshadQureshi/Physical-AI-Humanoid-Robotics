@@ -1,0 +1,28 @@
+{
+  "id": "building-humanoid-actuators",
+  "title": "Chapter 13: Building a Humanoid (Actuators, Joints, Hardware Choices)",
+  "description": "Designing and constructing the physical components of humanoid robots",
+  "source": "@site/docs/13-building-humanoid-actuators.md",
+  "sourceDirName": ".",
+  "slug": "/building-humanoid-actuators",
+  "permalink": "/docs/building-humanoid-actuators",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/13-building-humanoid-actuators.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 13,
+  "frontMatter": {
+    "title": "Chapter 13: Building a Humanoid (Actuators, Joints, Hardware Choices)",
+    "description": "Designing and constructing the physical components of humanoid robots"
+  },
+  "sidebar": "bookSidebar",
+  "previous": {
+    "title": "Chapter 12: Imitation Learning + Teleoperation",
+    "permalink": "/docs/imitation-learning-teleoperation"
+  },
+  "next": {
+    "title": "Chapter 14: Autonomous Navigation for Humanoids",
+    "permalink": "/docs/autonomous-navigation-humanoids"
+  }
+}

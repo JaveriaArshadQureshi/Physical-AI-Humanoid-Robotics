@@ -1,0 +1,28 @@
+{
+  "id": "robot-perception",
+  "title": "Chapter 9: Robot Perception (CV, LLM-Vision, Depth Estimation)",
+  "description": "Sensing and understanding the environment for intelligent robot behavior",
+  "source": "@site/docs/09-robot-perception.md",
+  "sourceDirName": ".",
+  "slug": "/robot-perception",
+  "permalink": "/docs/robot-perception",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/09-robot-perception.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 9,
+  "frontMatter": {
+    "title": "Chapter 9: Robot Perception (CV, LLM-Vision, Depth Estimation)",
+    "description": "Sensing and understanding the environment for intelligent robot behavior"
+  },
+  "sidebar": "bookSidebar",
+  "previous": {
+    "title": "Chapter 8: Control Systems (PID, MPC, Whole-Body Control)",
+    "permalink": "/docs/control-systems"
+  },
+  "next": {
+    "title": "Chapter 10: Vision-Language-Action Models (VLAs)",
+    "permalink": "/docs/vision-language-action-models"
+  }
+}

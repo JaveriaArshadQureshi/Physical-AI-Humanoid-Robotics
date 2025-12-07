@@ -1,0 +1,28 @@
+{
+  "id": "kinematics-dynamics",
+  "title": "Chapter 7: Kinematics & Dynamics (FK, IK, Trajectory Planning)",
+  "description": "Mathematical foundations for robot motion and force analysis",
+  "source": "@site/docs/07-kinematics-dynamics.md",
+  "sourceDirName": ".",
+  "slug": "/kinematics-dynamics",
+  "permalink": "/docs/kinematics-dynamics",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/07-kinematics-dynamics.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 7,
+  "frontMatter": {
+    "title": "Chapter 7: Kinematics & Dynamics (FK, IK, Trajectory Planning)",
+    "description": "Mathematical foundations for robot motion and force analysis"
+  },
+  "sidebar": "bookSidebar",
+  "previous": {
+    "title": "Chapter 6: Sensor Fusion + Localization (SLAM/IMU/LiDAR)",
+    "permalink": "/docs/sensor-fusion-localization"
+  },
+  "next": {
+    "title": "Chapter 8: Control Systems (PID, MPC, Whole-Body Control)",
+    "permalink": "/docs/control-systems"
+  }
+}

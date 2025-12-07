@@ -1,0 +1,469 @@
+openapi: 3.0.0
+info:
+  title: Physical AI & Humanoid Robotics Textbook Platform API
+  version: 1.0.0
+  description: API for serving textbook content, RAG chatbot, user authentication, personalization, and translation.
+
+servers:
+  - url: http://localhost:8000
+    description: Local Development Server
+
+components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+
+  schemas:
+    UserRegistration:
+      type: object
+      required:
+        - email
+        - password
+        - hardware_experience
+        - software_experience
+        - robotics_background
+        - preferred_language
+        - learning_goals
+      properties:
+        email:
+          type: string
+          format: email
+          example: user@example.com
+        password:
+          type: string
+          format: password
+          minLength: 8
+          example: securepassword123
+        hardware_experience:
+          type: string
+          enum: [Beginner, Intermediate, Advanced, None]
+          example: Intermediate
+        software_experience:
+          type: string
+          enum: [Beginner, Intermediate, Advanced, None]
+          example: Advanced
+        robotics_background:
+          type: string
+          enum: [None, Academic, Professional, Hobbyist]
+          example: Academic
+        preferred_language:
+          type: string
+          enum: [English, Urdu]
+          example: English
+        learning_goals:
+          type: string
+          example: Learn ROS2 and robot control.
+
+    UserLogin:
+      type: object
+      required:
+        - email
+        - password
+      properties:
+        email:
+          type: string
+          format: email
+          example: user@example.com
+        password:
+          type: string
+          format: password
+          example: securepassword123
+
+    AuthToken:
+      type: object
+      properties:
+        access_token:
+          type: string
+          example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
+        token_type:
+          type: string
+          example: bearer
+        user_id:
+          type: string
+          format: uuid
+          example: d2901ee-6c54-4b01-90e6-d701748f0851
+
+    UserProfile:
+      type: object
+      properties:
+        user_id:
+          type: string
+          format: uuid
+          readOnly: true
+          example: d2901ee-6c54-4b01-90e6-d701748f0851
+        email:
+          type: string
+          format: email
+          readOnly: true
+          example: user@example.com
+        hardware_experience:
+          type: string
+          enum: [Beginner, Intermediate, Advanced, None]
+          example: Intermediate
+        software_experience:
+          type: string
+          enum: [Beginner, Intermediate, Advanced, None]
+          example: Advanced
+        robotics_background:
+          type: string
+          enum: [None, Academic, Professional, Hobbyist]
+          example: Academic
+        preferred_language:
+          type: string
+          enum: [English, Urdu]
+          example: English
+        learning_goals:
+          type: string
+          example: Master ROS2 development.
+
+    ChapterContent:
+      type: object
+      properties:
+        chapter_id:
+          type: string
+          example: introduction-to-robotics
+        title:
+          type: string
+          example: Introduction to Physical AI & Humanoid Robotics
+        content:
+          type: string
+          example: "# Introduction...
+
+This chapter covers..."
+        language:
+          type: string
+          enum: [English, Urdu]
+          example: English
+        difficulty:
+          type: string
+          enum: [Beginner, Intermediate, Advanced]
+          example: Beginner
+        sections: # Simplified for RAG chunking
+          type: array
+          items:
+            type: object
+            properties:
+              section_id:
+                type: string
+              text:
+                type: string
+              embeddings_ready:
+                type: boolean
+
+    PersonalizationUpdate:
+      type: object
+      required:
+        - difficulty_mode
+      properties:
+        difficulty_mode:
+          type: string
+          enum: [Beginner, Intermediate, Advanced]
+          example: Intermediate
+
+    TranslationRequest:
+      type: object
+      required:
+        - target_language
+      properties:
+        target_language:
+          type: string
+          enum: [Urdu]
+          example: Urdu
+
+    ChatQuery:
+      type: object
+      required:
+        - query_text
+      properties:
+        query_text:
+          type: string
+          example: What is SLAM?
+        chapter_id:
+          type: string
+          example: sensor-fusion-localization
+        selected_text:
+          type: string
+          example: SLAM is a computational problem...
+
+    ChatResponse:
+      type: object
+      properties:
+        answer_text:
+          type: string
+          example: SLAM (Simultaneous Localization and Mapping) is the computational problem of constructing or updating a map of an unknown environment while simultaneously keeping track of an agent's location within it.
+        source_type:
+          type: string
+          enum: [selected_text, RAG]
+          example: RAG
+        source_chunks:
+          type: array
+          items:
+            type: string
+          example: ["SLAM is a computational problem...", "Key components of SLAM include..."]
+
+    AgentSummaryResponse:
+      type: object
+      properties:
+        chapter_id:
+          type: string
+          example: introduction-to-robotics
+        summary:
+          type: string
+          example: This chapter provides an overview of physical AI and humanoid robotics, covering key concepts and applications.
+
+    AgentQuizResponse:
+      type: object
+      properties:
+        chapter_id:
+          type: string
+          example: kinematics-dynamics
+        topic:
+          type: string
+          example: Inverse Kinematics
+        quiz:
+          type: array
+          items:
+            type: object
+            properties:
+              question:
+                type: string
+              options:
+                type: array
+                items:
+                  type: string
+              answer:
+                type: string
+
+paths:
+  /auth/signup:
+    post:
+      summary: Register a new user
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UserRegistration'
+      responses:
+        '201':
+          description: User successfully registered
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AuthToken'
+        '400':
+          description: Invalid input
+
+  /auth/login:
+    post:
+      summary: Authenticate and log in a user
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UserLogin'
+      responses:
+        '200':
+          description: User successfully logged in
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AuthToken'
+        '401':
+          description: Invalid credentials
+
+  /auth/me:
+    get:
+      summary: Get current user's profile
+      security:
+        - BearerAuth: []
+      responses:
+        '200':
+          description: Current user profile
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserProfile'
+        '401':
+          description: Unauthorized
+
+  /auth/profile:
+    put:
+      summary: Update current user's profile
+      security:
+        - BearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UserProfile'
+      responses:
+        '200':
+          description: User profile updated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserProfile'
+        '401':
+          description: Unauthorized
+        '400':
+          description: Invalid input
+
+  /chapters/{chapter_id}:
+    get:
+      summary: Retrieve personalized chapter content
+      parameters:
+        - in: path
+          name: chapter_id
+          schema:
+            type: string
+          required: true
+          description: ID of the chapter to retrieve
+      security:
+        - BearerAuth: [] # Optional for personalization
+      responses:
+        '200':
+          description: Chapter content, personalized and translated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ChapterContent'
+        '404':
+          description: Chapter not found
+
+  /chapters/{chapter_id}/personalize:
+    post:
+      summary: Update user's personalization settings for a chapter
+      parameters:
+        - in: path
+          name: chapter_id
+          schema:
+            type: string
+          required: true
+          description: ID of the chapter
+      security:
+        - BearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PersonalizationUpdate'
+      responses:
+        '200':
+          description: Personalization settings updated
+        '401':
+          description: Unauthorized
+        '400':
+          description: Invalid input
+
+  /chapters/{chapter_id}/translate:
+    post:
+      summary: Request on-demand translation for a chapter
+      parameters:
+        - in: path
+          name: chapter_id
+          schema:
+            type: string
+          required: true
+          description: ID of the chapter
+      security:
+        - BearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TranslationRequest'
+      responses:
+        '200':
+          description: Translated chapter content (may be from cache or newly generated)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ChapterContent'
+        '401':
+          description: Unauthorized
+        '400':
+          description: Invalid input
+
+  /chat/query:
+    post:
+      summary: Query the RAG Chatbot
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ChatQuery'
+      responses:
+        '200':
+          description: Chatbot response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ChatResponse'
+        '400':
+          description: Invalid input
+
+  /agents/summarize/{chapter_id}:
+    post:
+      summary: Generate a summary for a chapter using a Claude subagent
+      parameters:
+        - in: path
+          name: chapter_id
+          schema:
+            type: string
+          required: true
+          description: ID of the chapter
+      security:
+        - BearerAuth: []
+      responses:
+        '200':
+          description: Chapter summary generated by subagent
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AgentSummaryResponse'
+        '401':
+          description: Unauthorized
+        '404':
+          description: Chapter not found
+
+  /agents/quiz/{chapter_id}:
+    post:
+      summary: Generate a quiz for a chapter/topic using a Claude subagent
+      parameters:
+        - in: path
+          name: chapter_id
+          schema:
+            type: string
+          required: true
+          description: ID of the chapter
+      security:
+        - BearerAuth: []
+      requestBody:
+        required: false # Topic can be optional
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                topic:
+                  type: string
+                  example: Inverse Kinematics
+      responses:
+        '200':
+          description: Quiz generated by subagent
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AgentQuizResponse'
+        '401':
+          description: Unauthorized
+        '404':
+          description: Chapter not found

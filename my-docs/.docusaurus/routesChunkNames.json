@@ -1,0 +1,140 @@
+{
+  "/__docusaurus/debug-5ff": {
+    "__comp": "__comp---theme-debug-config-23-a-2ff",
+    "__context": {
+      "plugin": "plugin---docusaurus-debugb-38-ad3"
+    }
+  },
+  "/__docusaurus/debug/config-5ba": {
+    "__comp": "__comp---theme-debug-config-23-a-2ff",
+    "__context": {
+      "plugin": "plugin---docusaurus-debugb-38-ad3"
+    }
+  },
+  "/__docusaurus/debug/content-a2b": {
+    "__comp": "__comp---theme-debug-contentba-8-ce7",
+    "__context": {
+      "plugin": "plugin---docusaurus-debugb-38-ad3"
+    },
+    "__props": "__props---docusaurus-debug-content-3-c-0-be2"
+  },
+  "/__docusaurus/debug/globalData-c3c": {
+    "__comp": "__comp---theme-debug-global-dataede-0fa",
+    "__context": {
+      "plugin": "plugin---docusaurus-debugb-38-ad3"
+    }
+  },
+  "/__docusaurus/debug/metadata-156": {
+    "__comp": "__comp---theme-debug-site-metadata-68-e-3d4",
+    "__context": {
+      "plugin": "plugin---docusaurus-debugb-38-ad3"
+    }
+  },
+  "/__docusaurus/debug/registry-88c": {
+    "__comp": "__comp---theme-debug-registry-679-501",
+    "__context": {
+      "plugin": "plugin---docusaurus-debugb-38-ad3"
+    }
+  },
+  "/__docusaurus/debug/routes-000": {
+    "__comp": "__comp---theme-debug-routes-946-699",
+    "__context": {
+      "plugin": "plugin---docusaurus-debugb-38-ad3"
+    }
+  },
+  "/markdown-page-3d7": {
+    "__comp": "__comp---theme-mdx-page-1-f-3-b90",
+    "__context": {
+      "plugin": "plugin---markdown-pagea-74-7b5"
+    },
+    "content": "content---markdown-page-393-028"
+  },
+  "/docs-b40": {
+    "__comp": "__comp---theme-docs-root-5-e-9-0b6",
+    "__context": {
+      "plugin": "plugin---docsaba-d7c"
+    }
+  },
+  "/docs-77a": {
+    "__comp": "__comp---theme-doc-version-roota-7-b-5de",
+    "__props": "__props---docs-005-788"
+  },
+  "/docs-fef": {
+    "__comp": "__comp---theme-doc-roota-94-67a"
+  },
+  "/docs/autonomous-navigation-humanoids-8d2": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-autonomous-navigation-humanoids-3-d-4-258"
+  },
+  "/docs/building-humanoid-actuators-f0c": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-building-humanoid-actuators-556-6a3"
+  },
+  "/docs/capstone-project-guide-3d8": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-capstone-project-guide-9-be-796"
+  },
+  "/docs/control-systems-559": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-control-systemse-24-1a5"
+  },
+  "/docs/gazebo-simulation-061": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-gazebo-simulation-854-9d3"
+  },
+  "/docs/imitation-learning-teleoperation-442": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-imitation-learning-teleoperation-1-cb-d0b"
+  },
+  "/docs/intro-cda": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-intro-0-e-3-be1"
+  },
+  "/docs/introduction-to-physical-ai-f50": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-introduction-to-physical-ai-1-a-1-b71"
+  },
+  "/docs/kinematics-dynamics-44f": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-kinematics-dynamics-34-e-36a"
+  },
+  "/docs/linux-ros2-foundations-811": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-linux-ros-2-foundationsb-88-6d8"
+  },
+  "/docs/nvidia-isaac-sim-ef7": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-nvidia-isaac-sim-235-2b4"
+  },
+  "/docs/real-robot-control-architecture-d67": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-real-robot-control-architecturecb-3-f32"
+  },
+  "/docs/reinforcement-learning-robotics-8d2": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-reinforcement-learning-robotics-072-c90"
+  },
+  "/docs/robot-perception-7ee": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-robot-perceptiond-0-d-01f"
+  },
+  "/docs/safety-edge-computing-d02": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-safety-edge-computing-875-8db"
+  },
+  "/docs/sensor-fusion-localization-e06": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-sensor-fusion-localization-319-3fb"
+  },
+  "/docs/vision-language-action-models-8a9": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-vision-language-action-models-6-c-6-3b7"
+  },
+  "/-e5f": {
+    "__comp": "__comp---site-src-pages-index-tsx-1-df-d3e",
+    "__context": {
+      "plugin": "plugin---markdown-pagea-74-7b5"
+    },
+    "config": "config---5-e-9-4f3"
+  }
+}

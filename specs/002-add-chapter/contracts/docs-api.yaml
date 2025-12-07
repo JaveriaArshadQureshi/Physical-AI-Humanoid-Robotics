@@ -1,0 +1,33 @@
+# Documentation API Contract
+
+## Content Retrieval
+
+### Get Chapter Content
+- **Endpoint**: `/api/docs/chapter/{chapterId}`
+- **Method**: GET
+- **Description**: Retrieve the content of a specific chapter
+- **Parameters**:
+  - `chapterId` (string, required): The unique identifier of the chapter
+- **Response**:
+  - `200 OK`: Chapter content in markdown format
+  - `404 Not Found`: Chapter does not exist
+
+### Search Chapters
+- **Endpoint**: `/api/docs/search`
+- **Method**: GET
+- **Description**: Search across all chapters
+- **Parameters**:
+  - `query` (string, required): Search query
+  - `limit` (integer, optional): Maximum number of results (default: 10)
+- **Response**:
+  - `200 OK`: Array of matching chapters with metadata
+  - `400 Bad Request`: Invalid search parameters
+
+## Navigation Structure
+
+### Get Navigation Tree
+- **Endpoint**: `/api/docs/navigation`
+- **Method**: GET
+- **Description**: Retrieve the complete navigation structure
+- **Response**:
+  - `200 OK`: Hierarchical structure of documentation navigation

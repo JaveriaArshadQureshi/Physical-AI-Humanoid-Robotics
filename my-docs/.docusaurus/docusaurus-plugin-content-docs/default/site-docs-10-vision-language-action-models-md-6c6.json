@@ -1,0 +1,28 @@
+{
+  "id": "vision-language-action-models",
+  "title": "Chapter 10: Vision-Language-Action Models (VLAs)",
+  "description": "Bridging perception, language understanding, and physical action",
+  "source": "@site/docs/10-vision-language-action-models.md",
+  "sourceDirName": ".",
+  "slug": "/vision-language-action-models",
+  "permalink": "/docs/vision-language-action-models",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/10-vision-language-action-models.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 10,
+  "frontMatter": {
+    "title": "Chapter 10: Vision-Language-Action Models (VLAs)",
+    "description": "Bridging perception, language understanding, and physical action"
+  },
+  "sidebar": "bookSidebar",
+  "previous": {
+    "title": "Chapter 9: Robot Perception (CV, LLM-Vision, Depth Estimation)",
+    "permalink": "/docs/robot-perception"
+  },
+  "next": {
+    "title": "Chapter 11: Reinforcement Learning for Robotics",
+    "permalink": "/docs/reinforcement-learning-robotics"
+  }
+}

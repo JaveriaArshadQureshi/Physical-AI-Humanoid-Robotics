@@ -1,0 +1,28 @@
+{
+  "id": "real-robot-control-architecture",
+  "title": "Chapter 5: Real Robot Control Architecture",
+  "description": "Designing and implementing control systems for physical robots",
+  "source": "@site/docs/05-real-robot-control-architecture.md",
+  "sourceDirName": ".",
+  "slug": "/real-robot-control-architecture",
+  "permalink": "/docs/real-robot-control-architecture",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/05-real-robot-control-architecture.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "title": "Chapter 5: Real Robot Control Architecture",
+    "description": "Designing and implementing control systems for physical robots"
+  },
+  "sidebar": "bookSidebar",
+  "previous": {
+    "title": "Chapter 4: NVIDIA Isaac Sim Robotics Simulation",
+    "permalink": "/docs/nvidia-isaac-sim"
+  },
+  "next": {
+    "title": "Chapter 6: Sensor Fusion + Localization (SLAM/IMU/LiDAR)",
+    "permalink": "/docs/sensor-fusion-localization"
+  }
+}

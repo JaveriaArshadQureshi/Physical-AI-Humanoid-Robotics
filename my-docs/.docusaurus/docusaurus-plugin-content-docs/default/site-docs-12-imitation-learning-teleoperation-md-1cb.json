@@ -1,0 +1,28 @@
+{
+  "id": "imitation-learning-teleoperation",
+  "title": "Chapter 12: Imitation Learning + Teleoperation",
+  "description": "Learning from expert demonstrations and human control",
+  "source": "@site/docs/12-imitation-learning-teleoperation.md",
+  "sourceDirName": ".",
+  "slug": "/imitation-learning-teleoperation",
+  "permalink": "/docs/imitation-learning-teleoperation",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/12-imitation-learning-teleoperation.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 12,
+  "frontMatter": {
+    "title": "Chapter 12: Imitation Learning + Teleoperation",
+    "description": "Learning from expert demonstrations and human control"
+  },
+  "sidebar": "bookSidebar",
+  "previous": {
+    "title": "Chapter 11: Reinforcement Learning for Robotics",
+    "permalink": "/docs/reinforcement-learning-robotics"
+  },
+  "next": {
+    "title": "Chapter 13: Building a Humanoid (Actuators, Joints, Hardware Choices)",
+    "permalink": "/docs/building-humanoid-actuators"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "autonomous-navigation-humanoids",
+  "title": "Chapter 14: Autonomous Navigation for Humanoids",
+  "description": "Enabling humanoid robots to navigate complex environments autonomously",
+  "source": "@site/docs/14-autonomous-navigation-humanoids.md",
+  "sourceDirName": ".",
+  "slug": "/autonomous-navigation-humanoids",
+  "permalink": "/docs/autonomous-navigation-humanoids",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/14-autonomous-navigation-humanoids.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 14,
+  "frontMatter": {
+    "title": "Chapter 14: Autonomous Navigation for Humanoids",
+    "description": "Enabling humanoid robots to navigate complex environments autonomously"
+  },
+  "sidebar": "bookSidebar",
+  "previous": {
+    "title": "Chapter 13: Building a Humanoid (Actuators, Joints, Hardware Choices)",
+    "permalink": "/docs/building-humanoid-actuators"
+  },
+  "next": {
+    "title": "Chapter 15: Safety, Fail-safes, Edge Computing",
+    "permalink": "/docs/safety-edge-computing"
+  }
+}

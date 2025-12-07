@@ -1,0 +1,28 @@
+{
+  "id": "sensor-fusion-localization",
+  "title": "Chapter 6: Sensor Fusion + Localization (SLAM/IMU/LiDAR)",
+  "description": "Techniques for combining sensor data and determining robot position",
+  "source": "@site/docs/06-sensor-fusion-localization.md",
+  "sourceDirName": ".",
+  "slug": "/sensor-fusion-localization",
+  "permalink": "/docs/sensor-fusion-localization",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/06-sensor-fusion-localization.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "title": "Chapter 6: Sensor Fusion + Localization (SLAM/IMU/LiDAR)",
+    "description": "Techniques for combining sensor data and determining robot position"
+  },
+  "sidebar": "bookSidebar",
+  "previous": {
+    "title": "Chapter 5: Real Robot Control Architecture",
+    "permalink": "/docs/real-robot-control-architecture"
+  },
+  "next": {
+    "title": "Chapter 7: Kinematics & Dynamics (FK, IK, Trajectory Planning)",
+    "permalink": "/docs/kinematics-dynamics"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "reinforcement-learning-robotics",
+  "title": "Chapter 11: Reinforcement Learning for Robotics",
+  "description": "Learning control policies through environmental interaction",
+  "source": "@site/docs/11-reinforcement-learning-robotics.md",
+  "sourceDirName": ".",
+  "slug": "/reinforcement-learning-robotics",
+  "permalink": "/docs/reinforcement-learning-robotics",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/11-reinforcement-learning-robotics.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 11,
+  "frontMatter": {
+    "title": "Chapter 11: Reinforcement Learning for Robotics",
+    "description": "Learning control policies through environmental interaction"
+  },
+  "sidebar": "bookSidebar",
+  "previous": {
+    "title": "Chapter 10: Vision-Language-Action Models (VLAs)",
+    "permalink": "/docs/vision-language-action-models"
+  },
+  "next": {
+    "title": "Chapter 12: Imitation Learning + Teleoperation",
+    "permalink": "/docs/imitation-learning-teleoperation"
+  }
+}

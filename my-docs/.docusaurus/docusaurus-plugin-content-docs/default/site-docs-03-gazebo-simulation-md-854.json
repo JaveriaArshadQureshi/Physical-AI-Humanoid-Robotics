@@ -1,0 +1,28 @@
+{
+  "id": "gazebo-simulation",
+  "title": "Chapter 3: Gazebo / Ignition Simulation",
+  "description": "Physics-based simulation for robotics development and testing",
+  "source": "@site/docs/03-gazebo-simulation.md",
+  "sourceDirName": ".",
+  "slug": "/gazebo-simulation",
+  "permalink": "/docs/gazebo-simulation",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/03-gazebo-simulation.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "title": "Chapter 3: Gazebo / Ignition Simulation",
+    "description": "Physics-based simulation for robotics development and testing"
+  },
+  "sidebar": "bookSidebar",
+  "previous": {
+    "title": "Chapter 2: Linux + ROS2 Foundations",
+    "permalink": "/docs/linux-ros2-foundations"
+  },
+  "next": {
+    "title": "Chapter 4: NVIDIA Isaac Sim Robotics Simulation",
+    "permalink": "/docs/nvidia-isaac-sim"
+  }
+}

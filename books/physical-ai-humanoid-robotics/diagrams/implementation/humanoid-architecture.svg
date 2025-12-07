@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Title -->
+  <text x="400" y="30" text-anchor="middle" font-size="20" font-family="Arial" fill="#1f77b4">Humanoid Robot Architecture</text>
+
+  <!-- Head -->
+  <circle cx="400" cy="100" r="40" fill="#e6f3ff" stroke="#1f77b4" stroke-width="2" />
+  <text x="400" y="105" text-anchor="middle" font-size="12" font-family="Arial" fill="#000">Head</text>
+  <text x="400" y="120" text-anchor="middle" font-size="10" font-family="Arial" fill="#000">(Cameras, IMU)</text>
+
+  <!-- Torso -->
+  <rect x="360" y="140" width="80" height="120" fill="#e6f3ff" stroke="#1f77b4" stroke-width="2" />
+  <text x="400" y="170" text-anchor="middle" font-size="12" font-family="Arial" fill="#000">Torso</text>
+  <text x="400" y="185" text-anchor="middle" font-size="10" font-family="Arial" fill="#000">(Computer, Power)</text>
+
+  <!-- Left Arm -->
+  <line x1="360" y1="160" x2="280" y2="180" stroke="#1f77b4" stroke-width="10" />
+  <circle cx="280" cy="180" r="15" fill="#ffcccc" stroke="#d62728" stroke-width="2" />
+  <text x="280" y="190" text-anchor="middle" font-size="8" font-family="Arial" fill="#000">L Arm</text>
+
+  <!-- Right Arm -->
+  <line x1="440" y1="160" x2="520" y2="180" stroke="#1f77b4" stroke-width="10" />
+  <circle cx="520" cy="180" r="15" fill="#ffcccc" stroke="#d62728" stroke-width="2" />
+  <text x="520" y="190" text-anchor="middle" font-size="8" font-family="Arial" fill="#000">R Arm</text>
+
+  <!-- Left Leg -->
+  <line x1="380" y1="260" x2="360" y2="380" stroke="#1f77b4" stroke-width="12" />
+  <circle cx="360" cy="380" r="20" fill="#ccffcc" stroke="#2ca02c" stroke-width="2" />
+  <text x="360" y="390" text-anchor="middle" font-size="8" font-family="Arial" fill="#000">L Foot</text>
+
+  <!-- Right Leg -->
+  <line x1="420" y1="260" x2="440" y2="380" stroke="#1f77b4" stroke-width="12" />
+  <circle cx="440" cy="380" r="20" fill="#ccffcc" stroke="#2ca02c" stroke-width="2" />
+  <text x="440" y="390" text-anchor="middle" font-size="8" font-family="Arial" fill="#000">R Foot</text>
+
+  <!-- Computing Unit -->
+  <rect x="320" y="420" width="160" height="60" fill="#ffe6e6" stroke="#d62728" stroke-width="2" />
+  <text x="400" y="445" text-anchor="middle" font-size="12" font-family="Arial" fill="#000">Computing Unit</text>
+  <text x="400" y="460" text-anchor="middle" font-size="10" font-family="Arial" fill="#000">(Edge Computer)</text>
+
+  <!-- Power System -->
+  <rect x="280" y="500" width="100" height="40" fill="#fffacd" stroke="#ff7f0e" stroke-width="2" />
+  <text x="330" y="525" text-anchor="middle" font-size="10" font-family="Arial" fill="#000">Power System</text>
+
+  <!-- Actuator Control -->
+  <rect x="420" y="500" width="120" height="40" fill="#e0e0e0" stroke="#7f7f7f" stroke-width="2" />
+  <text x="480" y="525" text-anchor="middle" font-size="10" font-family="Arial" fill="#000">Actuator Control</text>
+
+  <!-- Arrows showing data flow -->
+  <line x1="400" y1="260" x2="400" y2="420" stroke="#7f7f7f" stroke-width="2" marker-end="url(#arrowhead)" />
+  <text x="410" y="350" text-anchor="start" font-size="10" font-family="Arial" fill="#7f7f7f">Control</text>
+
+  <line x1="400" y1="480" x2="400" y2="500" stroke="#7f7f7f" stroke-width="2" marker-end="url(#arrowhead)" />
+  <text x="410" y="490" text-anchor="start" font-size="10" font-family="Arial" fill="#7f7f7f">Power</text>
+
+  <line x1="330" y1="520" x2="420" y2="520" stroke="#7f7f7f" stroke-width="2" marker-end="url(#arrowhead)" />
+  <text x="375" y="510" text-anchor="middle" font-size="10" font-family="Arial" fill="#7f7f7f">Power</text>
+
+  <!-- Legend -->
+  <rect x="600" y="80" width="150" height="100" fill="none" stroke="#000" stroke-width="1" />
+  <text x="675" y="100" text-anchor="middle" font-size="12" font-family="Arial" fill="#000">Legend</text>
+  <circle cx="620" cy="120" r="8" fill="#e6f3ff" stroke="#1f77b4" stroke-width="1" />
+  <text x="635" y="123" text-anchor="start" font-size="10" font-family="Arial" fill="#000">Structure</text>
+  <circle cx="620" cy="140" r="8" fill="#ffcccc" stroke="#d62728" stroke-width="1" />
+  <text x="635" y="143" text-anchor="start" font-size="10" font-family="Arial" fill="#000">Actuators</text>
+  <circle cx="620" cy="160" r="8" fill="#ccffcc" stroke="#2ca02c" stroke-width="1" />
+  <text x="635" y="163" text-anchor="start" font-size="10" font-family="Arial" fill="#000">Feet</text>
+
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7"
+      refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#7f7f7f" />
+    </marker>
+  </defs>
+</svg>

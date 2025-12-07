@@ -1,0 +1,113 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "path": "/docs",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/docs",
+          "mainDocId": "intro",
+          "docs": [
+            {
+              "id": "autonomous-navigation-humanoids",
+              "path": "/docs/autonomous-navigation-humanoids",
+              "sidebar": "bookSidebar"
+            },
+            {
+              "id": "building-humanoid-actuators",
+              "path": "/docs/building-humanoid-actuators",
+              "sidebar": "bookSidebar"
+            },
+            {
+              "id": "capstone-project-guide",
+              "path": "/docs/capstone-project-guide",
+              "sidebar": "bookSidebar"
+            },
+            {
+              "id": "control-systems",
+              "path": "/docs/control-systems",
+              "sidebar": "bookSidebar"
+            },
+            {
+              "id": "gazebo-simulation",
+              "path": "/docs/gazebo-simulation",
+              "sidebar": "bookSidebar"
+            },
+            {
+              "id": "imitation-learning-teleoperation",
+              "path": "/docs/imitation-learning-teleoperation",
+              "sidebar": "bookSidebar"
+            },
+            {
+              "id": "intro",
+              "path": "/docs/intro",
+              "sidebar": "bookSidebar"
+            },
+            {
+              "id": "introduction-to-physical-ai",
+              "path": "/docs/introduction-to-physical-ai",
+              "sidebar": "bookSidebar"
+            },
+            {
+              "id": "kinematics-dynamics",
+              "path": "/docs/kinematics-dynamics",
+              "sidebar": "bookSidebar"
+            },
+            {
+              "id": "linux-ros2-foundations",
+              "path": "/docs/linux-ros2-foundations",
+              "sidebar": "bookSidebar"
+            },
+            {
+              "id": "nvidia-isaac-sim",
+              "path": "/docs/nvidia-isaac-sim",
+              "sidebar": "bookSidebar"
+            },
+            {
+              "id": "real-robot-control-architecture",
+              "path": "/docs/real-robot-control-architecture",
+              "sidebar": "bookSidebar"
+            },
+            {
+              "id": "reinforcement-learning-robotics",
+              "path": "/docs/reinforcement-learning-robotics",
+              "sidebar": "bookSidebar"
+            },
+            {
+              "id": "robot-perception",
+              "path": "/docs/robot-perception",
+              "sidebar": "bookSidebar"
+            },
+            {
+              "id": "safety-edge-computing",
+              "path": "/docs/safety-edge-computing",
+              "sidebar": "bookSidebar"
+            },
+            {
+              "id": "sensor-fusion-localization",
+              "path": "/docs/sensor-fusion-localization",
+              "sidebar": "bookSidebar"
+            },
+            {
+              "id": "vision-language-action-models",
+              "path": "/docs/vision-language-action-models",
+              "sidebar": "bookSidebar"
+            }
+          ],
+          "draftIds": [],
+          "sidebars": {
+            "bookSidebar": {
+              "link": {
+                "path": "/docs/intro",
+                "label": "intro"
+              }
+            }
+          }
+        }
+      ],
+      "breadcrumbs": true
+    }
+  }
+}

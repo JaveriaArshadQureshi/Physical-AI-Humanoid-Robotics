@@ -1,0 +1,43 @@
+# Book Content API Contract
+
+## Content Retrieval
+
+### Get Chapter Content
+- **Endpoint**: `/api/book/chapter/{chapterId}`
+- **Method**: GET
+- **Description**: Retrieve the content of a specific chapter
+- **Parameters**:
+  - `chapterId` (string, required): The unique identifier of the chapter
+  - `language` (string, optional): Language code (en, ur), defaults to 'en'
+- **Response**:
+  - `200 OK`: Chapter content in markdown format with metadata
+  - `404 Not Found`: Chapter does not exist
+  - `400 Bad Request`: Invalid language code
+
+### Search Book Content
+- **Endpoint**: `/api/book/search`
+- **Method**: GET
+- **Description**: Search across all book content
+- **Parameters**:
+  - `query` (string, required): Search query
+  - `language` (string, optional): Language code (en, ur), defaults to 'en'
+  - `limit` (integer, optional): Maximum number of results (default: 10)
+- **Response**:
+  - `200 OK`: Array of matching content with metadata and relevance scores
+  - `400 Bad Request`: Invalid search parameters
+
+### Get All Chapters
+- **Endpoint**: `/api/book/chapters`
+- **Method**: GET
+- **Description**: Retrieve list of all chapters with metadata
+- **Parameters**:
+  - `language` (string, optional): Language code (en, ur), defaults to 'en'
+- **Response**:
+  - `200 OK`: Array of all chapters with titles, descriptions, and positions
+
+### Get Chapter Navigation
+- **Endpoint**: `/api/book/navigation`
+- **Method**: GET
+- **Description**: Retrieve the complete navigation structure
+- **Response**:
+  - `200 OK`: Hierarchical structure of book chapters with prerequisites and cross-references
