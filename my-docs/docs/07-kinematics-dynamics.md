@@ -81,7 +81,7 @@ public:
 
 Forward kinematics computes the end-effector pose given the joint angles:
 ```
-T_end_effector = f(q1, q2, ..., qn)
+T<sub>end_effector</sub> = f(q1, q2, ..., qn)
 ```
 
 ### Denavit-Hartenberg (DH) Convention
@@ -89,17 +89,17 @@ T_end_effector = f(q1, q2, ..., qn)
 The DH convention provides a systematic way to define coordinate frames for robot links:
 
 #### DH Parameters
-- **a_i**: Link length (distance along x_i from z_{i-1} to z_i)
-- **α_i**: Link twist (angle from z_{i-1} to z_i about x_i)
-- **d_i**: Link offset (distance along z_{i-1} from x_{i-1} to x_i)
-- **θ_i**: Joint angle (angle from x_{i-1} to x_i about z_{i-1})
+- **a<sub>i</sub>**: Link length (distance along x<sub>i</sub> from z<sub>i-1</sub> to z<sub>i</sub>)
+- **α<sub>i</sub>**: Link twist (angle from z<sub>i-1</sub> to z<sub>i</sub> about x<sub>i</sub>)
+- **d<sub>i</sub>**: Link offset (distance along z<sub>i-1</sub> from x<sub>i-1</sub> to x<sub>i</sub>)
+- **θ<sub>i</sub>**: Joint angle (angle from x<sub>i-1</sub> to x<sub>i</sub> about z<sub>i-1</sub>)
 
 #### Transformation Matrix
 ```
-A_i = [cos(θ_i)   -sin(θ_i)*cos(α_i)   sin(θ_i)*sin(α_i)   a_i*cos(θ_i)]
-      [sin(θ_i)    cos(θ_i)*cos(α_i)   -cos(θ_i)*sin(α_i)   a_i*sin(θ_i)]
-      [0           sin(α_i)            cos(α_i)             d_i        ]
-      [0           0                   0                    1          ]
+A<sub>i</sub> = [cos(θ<sub>i</sub>)   -sin(θ<sub>i</sub>)*cos(α<sub>i</sub>)   sin(θ<sub>i</sub>)*sin(α<sub>i</sub>)   a<sub>i</sub>*cos(θ<sub>i</sub>)]
+                [sin(θ<sub>i</sub>)    cos(θ<sub>i</sub>)*cos(α<sub>i</sub>)   -cos(θ<sub>i</sub>)*sin(α<sub>i</sub>)   a<sub>i</sub>*sin(θ<sub>i</sub>)]
+                [0                    sin(α<sub>i</sub>)            cos(α<sub>i</sub>)             d<sub>i</sub>        ]
+                [0                    0                           0                              1                    ]
 ```
 
 ### Forward Kinematics Implementation
@@ -185,12 +185,12 @@ q = f^(-1)(T_desired)
 
 The Jacobian relates joint velocities to end-effector velocities:
 ```
-v_ee = J(q) * q_dot
+v<sub>ee</sub> = J(q) * q<sub>dot</sub>
 ```
 
 Where:
-- v_ee: End-effector velocity (linear + angular)
-- q_dot: Joint velocity vector
+- v<sub>ee</sub>: End-effector velocity (linear + angular)
+- q<sub>dot</sub>: Joint velocity vector
 - J(q): Jacobian matrix
 
 #### Jacobian Computation
@@ -381,17 +381,17 @@ private:
 The equations of motion for a robot manipulator are given by the Euler-Lagrange equations:
 
 ```
-M(q) * q_ddot + C(q, q_dot) * q_dot + g(q) = τ
+M(q) * q<sub>ddot</sub> + C(q, q<sub>dot</sub>) * q<sub>dot</sub> + g(q) = τ
 ```
 
 Where:
 - M(q): Mass/inertia matrix
-- C(q, q_dot): Coriolis and centrifugal forces
+- C(q, q<sub>dot</sub>): Coriolis and centrifugal forces
 - g(q): Gravity forces
 - τ: Joint torques
 - q: Joint positions
-- q_dot: Joint velocities
-- q_ddot: Joint accelerations
+- q<sub>dot</sub>: Joint velocities
+- q<sub>ddot</sub>: Joint accelerations
 
 ### Dynamic Parameters
 
@@ -576,7 +576,7 @@ q(t) = a0 + a1*t + a2*t^2 + a3*t^3
 
 Boundary conditions:
 - q(0) = q_start, q(T) = q_end
-- q_dot(0) = v_start, q_dot(T) = v_end
+- q<sub>dot</sub>(0) = v_start, q<sub>dot</sub>(T) = v_end
 
 #### Quintic Polynomials
 For smoother motion with specified accelerations:
